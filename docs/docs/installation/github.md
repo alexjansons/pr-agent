@@ -700,6 +700,10 @@ For example, if your GitHub server is at `https://github.mycompany.com`, add the
         # ... previous environment values
         GITHUB__BASE_URL: "https://github.mycompany.com/api/v3"
 ```
+
+For GitHub Enterprise Cloud with data residency (`<subdomain>.ghe.com`), set `GITHUB__BASE_URL` to the API host, `https://api.<subdomain>.ghe.com`.
+In a workflow, `${{ github.api_url }}` holds this value.
+Links in PR-Agent comments then point at `https://<subdomain>.ghe.com`.
 :::
 
 ---
